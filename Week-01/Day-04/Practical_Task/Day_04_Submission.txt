@@ -1,0 +1,37 @@
+Date: 2026-09-21
+Topic: Day 4 - Generative AI & LLMs
+
+What I learned:
+- How to connect to an LLM API using the Python OpenAI SDK.
+- Understanding of core concepts: Tokens, Context Window, and Temperature.
+- How to structure system and user prompts to guide the AI's behavior and reduce hallucination.
+- Techniques to force an LLM to output structured data (JSON).
+- How string formatting in Python interacts with JSON braces, and how to escape them.
+- Troubleshooting API billing limitations and integrating alternative models (Google Gemini via OpenAI compatibility).
+
+What I implemented:
+- An AI text assistant CLI application in Python.
+- Features for Question Answering, Text Summarization, and Text Rewriting.
+- A new feature to extract entities (names, places, organizations, dates) from text and return them as a structured JSON response.
+
+What worked:
+- Successfully formatting system prompts to enforce specific rules (e.g., no hallucination, specific JSON format).
+- Routing requests through the OpenAI SDK to a free alternative model (Google Gemini) by updating the `base_url`.
+
+What failed:
+- The initial setup failed because the active virtual environment was incorrect (from Day-02 instead of Day-04).
+- The `requirements.txt` file was improperly formatted (used spaces instead of `==`), preventing dependency installation.
+- The original OpenAI API key returned a `429 Insufficient Quota` error due to zero billing credits on the account.
+- When generating the structured JSON response, Python threw a `KeyError: '\n  "entities"'`.
+
+How I solved it:
+- Activated the correct local `.venv` for the Day-04 project and re-formatted `requirements.txt` to correctly specify package versions with `==`.
+- Migrated the application to use Google Gemini's free API by replacing the OpenAI API key with a Gemini key and updating the `base_url` to Google's OpenAI-compatible endpoint.
+- Fixed the `KeyError` by escaping the JSON curly brackets using double brackets `{{ }}` in the prompt string, preventing Python's `.format()` method from misinterpreting them as variables.
+
+What I would improve:
+- Add error handling for JSON decoding in case the model returns malformed text.
+- Implement streaming responses so the user doesn't have to wait for the entire text to generate before reading it.
+
+Git commit:
+git commit -m "feat: complete AI text assistant with JSON extraction, Gemini API integration, and prompt bug fixes"
