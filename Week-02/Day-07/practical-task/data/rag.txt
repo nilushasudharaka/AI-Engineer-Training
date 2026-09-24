@@ -1,0 +1,11 @@
+Retrieval-Augmented Generation, commonly called RAG, is a technique that combines information retrieval with text generation.
+
+A RAG system first retrieves relevant information from a collection of documents. The retrieved information is then provided to a language model as context.
+
+The language model uses the retrieved context to generate an answer to the user's question.
+
+A typical RAG pipeline contains document loading, chunking, embedding, vector storage, retrieval, context construction, and generation.
+
+RAG can help applications answer questions using information from specific documents rather than relying only on the language model's internal knowledge.
+
+The main components of a RAG system are document ingestion, chunking, embeddings, a vector database, similarity search, context construction, and language model generation.

@@ -1,0 +1,7 @@
+Python is a high-level programming language known for its simple and readable syntax.
+
+Python is widely used in artificial intelligence, machine learning, data science, web development, automation, and software development.
+
+Python provides many libraries for AI and data science, including NumPy, pandas, scikit-learn, and PyTorch.
+
+One advantage of Python is that developers can build applications using a relatively small amount of code.

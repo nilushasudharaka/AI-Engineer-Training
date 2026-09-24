@@ -1,0 +1,9 @@
+Machine learning is a branch of artificial intelligence that allows computers to learn patterns from data.
+
+A machine learning model is trained using data and can make predictions or decisions based on patterns learned during training.
+
+Common types of machine learning include supervised learning, unsupervised learning, and reinforcement learning.
+
+Supervised learning uses labelled data to train models for tasks such as classification and regression.
+
+Unsupervised learning works with data that does not have predefined labels. It can be used to discover patterns or groups in data.
